@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/input.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/button.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/form.min.css">
+        <style>
+          .App {
+            text-align: center;
+          }
+          
+
+          body{
+            background: #282c34 !important;
+          
+          }
+          .App-header {
+            background: #282c34 !important;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: calc(10px + 2vmin);
+            color: white;
+          }
+          
+          .App-link {
+            color: #61dafb;
+          }
+
+        </style>
+    </head>
+    <body>
+        <div class="App">
+            <header class="App-header">
+              <h1>Vehicle detection using OpenCV</h1>
+              <p
+                class="App-link">
+                Enter URL of a Traffic Video
+              </p>
+              <form class="ui form"  action="/upload" method="POST" style="width: 800px;">
+                <div class="field">
+                  <div class="ui input">
+                    <input name="video_url"  required type="url" />
+                  </div>
+                </div>
+                <button class="ui button">Submit</button>
+              </form>
+    
+            </header>
+        </div>
+    </body>
+</html>

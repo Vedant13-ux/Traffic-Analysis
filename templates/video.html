@@ -1,0 +1,63 @@
+<html>
+
+<head>
+  <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Video.js Starter Template</title>
+  <style>
+      @import url('https://fonts.googleapis.com/css?family=Karla');
+      body{
+        font-family: 'Karla', sans-serif;
+        background: #BBD2C5;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      }
+      .card{
+          background-color: aliceblue;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          height: 300px;
+          width: 300px;
+          margin-left: 20px;
+          padding: 10px;
+      }
+  </style>
+</head>
+
+<body>
+  <center><h1 style="color: aliceblue;">Processed Video</h1></center>
+  <div style="display: flex; align-items: center; margin: 0 auto; max-width: 1000px; justify-content: center;">
+    
+    <video
+         id="my_video"
+         class="video-js"
+         controls
+         preload="auto"
+         width="900"
+         height="500"
+         poster="https://i.ytimg.com/vi/IdBnsNttXq0/maxresdefault.jpg"
+         data-setup="{}"
+         >
+        <source src="http://localhost:5000/output.mp4" type="video/mp4">
+    </video>
+    <div class="card">
+        <center><strong>Summary</strong></center>
+        <br>
+        1. Average vehicles passing the junction = {{passing_junction_density}}<br><br>
+
+        2. Average stop time = {{average_stop_time}}<br><br>
+
+        3. Average density of vehicles on Forward lane = {{right_average_density}}<br><br>
+
+        4. Average density of vehicles on Backward lane = {{left_average_density}}<br><br>
+
+        5. Peak time (in seconds) ={{peak_second}}
+        <br><br>
+    </div>
+  </div>
+  
+  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+</body>
+
+</html>
+
